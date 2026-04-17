@@ -18,7 +18,7 @@ A modern Windows C++ utility to lock your microphone volume and prevent unwanted
   ```
 
 ## Usage
-1. Run `fix-mic.exe`.
+1. Type `.\max-mic.exe` into the terminal.
 2. Use the slider to set your desired microphone volume.
 3. Toggle "Auto Lock Volume" to enable/disable the enforcement.
 4. Switch between Light and Dark modes using the bottom button.
