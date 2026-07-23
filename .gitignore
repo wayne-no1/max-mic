@@ -32,6 +32,7 @@
 
 # Executables
 *.exe
+!max-mic.exe
 *.out
 *.app
 
