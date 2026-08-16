@@ -205,12 +205,6 @@ DWORD WINAPI MonitoringThread(LPVOID) {
             if (SUCCEEDED(device->Activate(__uuidof(IAudioEndpointVolume), CLSCTX_ALL, nullptr, (void**)&vol))) {
                 g_pVolume = vol;
 
-                // 啟動或切換裝置時，讀取當前麥克風音量以初始化 UI 拉條
-                float currentVol = 1.0f;
-                if (SUCCEEDED(g_pVolume->GetMasterVolumeLevelScalar(&currentVol))) {
-                    g_targetVolume = currentVol;
-                }
-
                 pCallback = new VolumeCallback();
                 g_pVolume->RegisterControlChangeNotify(pCallback);
 
